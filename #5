@@ -1,0 +1,8 @@
+def is_hex_color(code):
+    if len(code) == 7 and code[0] == '#':
+        for char in code[1:]:
+            if char.lower() not in '0123456789abcdef':
+                return False
+        return True
+    return False
+print(is_hex_color("#111111"))
